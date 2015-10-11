@@ -12,11 +12,9 @@
 
 function clean(node) {
   if (isElementNode(node)) {
-    if (node.childNodes && node.childNodes.length) {
-      for (var i = 0; i < node.childNodes.length; i++) {
-        if (clean(node.childNodes[i])) {
-          i--; // childNodes.length reduced by 1
-        }
+    for (var i = 0; i < node.childNodes.length; i++) {
+      if (clean(node.childNodes[i])) {
+        i--; // childNodes.length reduced by 1
       }
     }
   } else if (!isNonEmptyTextNode(node)) {
