@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/rhalff/dom-clean.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rhalff/dom-clean/issues"
   },
