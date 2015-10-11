@@ -1,0 +1,23 @@
+{
+  "name": "dom-clean",
+  "version": "1.0.0",
+  "description": "DOM Cleaner",
+  "main": "index.js",
+  "scripts": {
+    "test": "xvfb-run -a testem -l firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhalff/dom-clean.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhalff/dom-clean/issues"
+  },
+  "homepage": "https://github.com/rhalff/dom-clean#readme",
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.0"
+  }
+}
