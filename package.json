@@ -4,7 +4,7 @@
   "description": "DOM Cleaner",
   "main": "index.js",
   "scripts": {
-    "test": "xvfb-run -a testem -l firefox"
+    "test": "xvfb-run -a testem ci"
   },
   "repository": {
     "type": "git",

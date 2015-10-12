@@ -7,5 +7,6 @@
   ],
   "before_tests": "browserify tests.js -o test_bundle.js",
   "on_exit": "rm test_bundle.js",
-  "launch_in_dev": [ "chrome", "firefox" ]
+  "launch_in_dev": [ "chrome", "firefox" ],
+  "launch_in_ci": [ "firefox" ]
 }
