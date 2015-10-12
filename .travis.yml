@@ -3,4 +3,4 @@ sudo: false
 node_js:
   - "stable"
 before_install:
-  - npm install testem
+  - npm install testem browserify
