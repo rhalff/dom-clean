@@ -36,4 +36,11 @@ describe('Dom McClean', function() {
       });
   });
 
+  it('Keep comments', function() {
+    var d = document.createElement('div');
+    d.innerHTML = '<h1>Foo <!-- A comment --></h1>';
+    clean.clean(d, true);
+    d.innerHTML.should.eql('<h1>Foo <!-- A comment --></h1>');
+  });
+
 });

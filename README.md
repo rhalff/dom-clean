@@ -5,10 +5,15 @@ Simple dom utility to strip comments from a dom tree and removes empty blank spa
 To ensure traversing will only meet ELEMENT_NODEs or TEXT_NODEs.
 
 Usage:
-```
-var dc = require('dom-clean');
+```Javascript
+var DomClean = require('dom-clean').clean;
 var el = document.body;
-dc.clean(el);
+DomClean(el);
+```
+
+If you want to keep the comments use:
+```Javascript
+DomClean(el, true);
 ```
 
 Test:

@@ -4,7 +4,8 @@
   "description": "DOM Cleaner",
   "main": "index.js",
   "scripts": {
-    "test": "xvfb-run -a testem ci"
+    "test": "npm run lint && xvfb-run -a testem ci",
+    "lint": "jshint *.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/rhalff/dom-clean#readme",
   "devDependencies": {
+    "browserify": "^11.2.0",
+    "jshint": "^2.8.0",
     "mocha": "^2.3.3",
     "should": "^7.1.0"
   }

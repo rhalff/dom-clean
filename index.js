@@ -7,16 +7,18 @@
  * DOM Clean, leaving only nodes & text nodes.
  *
  * @param {DomElement} node
- * @param {DomElement} parent
+ * @param {DomElement} kc Keep comments
  */
 
-function clean(node) {
+function clean(node, comments) {
   if (isElementNode(node)) {
     for (var i = 0; i < node.childNodes.length; i++) {
-      if (clean(node.childNodes[i])) {
+      if (clean(node.childNodes[i], comments)) {
         i--; // childNodes.length reduced by 1
       }
     }
+  } else if(comments && isComment(node)) {
+
   } else if (!isNonEmptyTextNode(node)) {
     node.parentNode.removeChild(node);
     return true; // removed
@@ -30,6 +32,10 @@ function isElementNode(node) {
 function isNonEmptyTextNode(node) {
   return !!(node.nodeType === Node.TEXT_NODE &&
     node.nodeValue.replace(/^\s+|\s+$/g, ''));
+}
+
+function isComment(node) {
+    return node.nodeType === Node.COMMENT_NODE;
 }
 
 function cleanHTML(html) {
